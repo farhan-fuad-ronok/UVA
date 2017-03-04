@@ -1,0 +1,25 @@
+// accepted with help of arif vai 
+
+#include<stdio.h>
+
+
+int main()
+{
+	signed int e,f,c,sum=0;
+	int N,b,d,z,y;
+	scanf("%d",&N);
+	while(N--)
+	{
+	scanf("%d %d %d",&e,&f,&c);
+	sum=0;
+	b=e+f;
+	 while(b>=c)
+		 {
+			sum=sum+(b/c);
+ 			b=(b/c)+(b%c);
+		 }
+	printf("%d\n",sum);
+	
+	}
+        
+}
