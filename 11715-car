@@ -1,0 +1,61 @@
+//  Accepted 15 october 2014
+
+// 11715 - car
+
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+	
+	double a, b, c, u, v,s, t;
+	int test, T = 1;
+
+	while (scanf("%d", &test) == 1 && test != 0)
+	{
+		scanf("%lf %lf %lf", &a, &b, &c);
+		{
+		switch (test)
+			{
+			case 1:
+				u = a;
+				v = b;
+				t = c;
+
+				a = (double)(v - u) / t;
+				s = (double)(((v*v) - (u*u)) / (2 * a));
+
+				printf("Case %d: %.3lf %.3lf\n", T, s, a);
+				break;
+			
+			case 2:
+				u = a;
+				v = b;
+				a = c;
+				s = (double)(((v*v) - (u*u)) / (2 * a));
+				t = (double)(v - u) / a;
+				printf("Case %d: %.3lf %.3lf\n", T, s, t);
+				break;
+			
+			case 3:
+				u = a;
+				a = b;
+				s = c;
+				v = (double) (sqrt(u*u + 2 * a*s));
+				t = (double) ((v - u) / a);
+				printf("Case %d: %.3lf %.3lf\n", T, v, t);
+				break;
+			
+			case 4:
+				v = a;
+				a = b;
+				s = c;
+				u = (double)(sqrt(v*v - 2 * a*s));
+				t = (double)((v - u) / a);
+				printf("Case %d: %.3lf %.3lf\n", T, u, t);
+				break;
+		}
+		T++;
+
+		}
+	}
+}
