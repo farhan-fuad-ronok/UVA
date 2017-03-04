@@ -1,0 +1,33 @@
+// accepted 18.12.2013
+
+#include<stdio.h>
+int main()
+{
+	int C,T,N,K,P,i;
+	scanf("%d",&T);
+	C=1;
+	while(T--)
+	{
+		scanf("%d %d %d",&N,&K,&P);
+		if(K+P>N)
+		{
+			i=(K+P)-N;
+			while(i>N)
+			{
+				i=(i-N);
+			}
+			printf("Case %d: %d\n",C++,i);
+		}
+		else if(((K+P)<N))
+		{
+			i=((K+P));
+			printf("Case %d: %d\n",C++,i);
+		}
+		else if(((K+P)==N))
+		{
+			i=N;
+			printf("Case %d: %d\n",C++,i);
+		}
+   }
+	return 0 ;
+}
