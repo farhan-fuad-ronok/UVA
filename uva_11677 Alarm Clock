@@ -1,0 +1,72 @@
+// Accepted .	>> 17.12.2013
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int H1, M1, H2, M2,h,hh,M,p=1 ;
+	    freopen("11677.txt","r",stdin);
+		while(p!=0)
+		{
+			scanf("%d %d %d %d",&H1,&M1,&H2,&M2);
+    		if((H1==0 && H2==0 && M1==0 && M2==0))
+			{
+				p=0;
+			}
+			if(((H1!=0 && H2!=0)&&(H1==H2)) && ((M1!=0 && M2!=0)&&(M1==M2)!=0))
+			{
+				h=0;
+				printf("%d\n",h);
+			}
+		    if(H1 > H2 )
+		    {
+				H1=24-H1;
+				h = H1+H2 ;
+				h = abs(h);
+				h = (h*60);
+				if(M1>M2)
+				{
+					M=(60-M1)-(60-M2);
+					h=h+M;
+				}
+				else if(M2>M1)
+				{
+					M=(60-M2)-(60-M1);
+					h=h-M;
+				}
+				printf("%d\n",h);
+			}	
+			else if(H2 > H1)
+			{
+				h = H2 - H1;
+				h=abs(h);
+				h = (h*60);
+				if(M2>M1)
+				{
+						M=(60-M1)-(60-M2);
+						M=abs(M);
+						h=h+M;
+				}	
+				if(M1>M2)
+				{
+					M=(60-M1)-(60-M2);
+					M=abs(M);
+					h=h-M;
+				}
+				printf("%d\n",h);
+				}	
+			else if(H1==H2 && M1 > M2)
+			{
+				h=(24*60);
+				h=h-(M1-M2);
+				printf("%d\n",h);
+			}
+			else if(H1==H2 && M1 < M2)
+			{
+				h=(M2-M1);
+				printf("%d\n",h);
+			}
+		}
+}
+ 
+	
