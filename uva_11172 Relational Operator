@@ -1,0 +1,19 @@
+//accepted
+
+#include<stdio.h>
+int main()
+{
+	int a,b,c,p=1;
+	//printf("Enter total case time:");
+	scanf("%d\n",&c);
+	while(p<=c)
+	{
+	//printf("Enter the value of A and B:");
+	scanf("%d\t%d",&a,&b);
+
+		if(a>b)printf(">\n");
+		if(a<b)printf("<\n");
+        if(a==b)printf("=\n");
+		p++;
+	}
+}
