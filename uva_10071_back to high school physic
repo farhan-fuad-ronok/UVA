@@ -1,0 +1,15 @@
+// Accepted
+
+#include<stdio.h>
+
+int main()
+{
+	int v,t;
+	freopen("10071.txt","r",stdin);
+	while(scanf("%d %d",&v,&t)==2)
+	{
+		t=t+t;
+		v=v*t;
+		printf("%d\n",v);
+	}
+}
