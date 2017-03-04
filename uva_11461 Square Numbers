@@ -1,0 +1,26 @@
+// uva problem:  11461
+//accepted
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int a,b,c,count=0,p=0;
+	while(p!=1)
+	{
+
+	scanf("%d %d",&a,&b);
+	double d;
+	if(a==0 && b==0)break;
+	   for(c=a;c<=b;c++)
+	     {
+            d=pow(c,.5);
+			if(d==int(d))
+		    {
+			 count++;
+	        }
+	      }printf("%d\n",count);count=0;
+	}
+	return 0 ;
+}
