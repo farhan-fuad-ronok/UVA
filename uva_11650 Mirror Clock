@@ -1,0 +1,68 @@
+// Accepted 19.12.2013
+
+#include<stdio.h>
+int main()
+{
+	int T,H,M;
+    scanf("%d",&T);
+    while(T<1000 && T--)
+	{
+		scanf("%d:%d",&H,&M);
+        while(H!=0)
+		{
+			if(H==1) {H=11;break;}
+			if(H==2) {H=10;break;}
+			if(H==3) {H=9;break;}
+			if(H==4) {H=8;break;}
+			if(H==5) {H=7;break;}
+			if(H==6) {H=6;break;}
+			if(H==7) {H=5;break;}
+			if(H==8) {H=4;break;}
+			if(H==9) {H=3;break;}
+			if(H==10){H=2;break;}
+			if(H==11){H=1;break;}
+			if(H=12) {H=12;break;}
+		}
+		if((H>=0 && H<=9) && (M==00 || ((60-M)==0)))
+			{   
+				if(M==60)
+				{
+					--H;
+				}
+				M=0;
+				printf("0%d:0%d\n",H,M);
+			}
+			else if((H>9) && (M==00 || ((60-M)==0)))
+			{   
+				if(M==60)
+				{
+					--H;
+				}
+				M=0;
+				printf("%d:0%d\n",H,M);
+			}
+		    if(M!=0)
+		    {
+				H=(H-1);
+			    M=(60-M);
+				if(H==0){H=12;}
+			
+				if((H>=0 && H<=9) && (M>=0 && M<=9))
+				{
+					printf("0%d:0%d\n",H,M);
+				}
+				else if((H>=0 && H<=9) && (M>9))
+				{
+					printf("0%d:%d\n",H,M);
+				}
+				else if((H>9) && (M>=0 && M<=9))
+				{
+					printf("%d:0%d\n",H,M);
+				}
+				else if(H>9 && M>9)
+				{
+				printf("%d:%d\n",H,M);
+				}
+			}	
+		}	
+	}
